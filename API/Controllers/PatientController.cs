@@ -114,7 +114,7 @@ namespace HospitalManagement.Controllers
         [Produces("application/json")]
         public IActionResult GetById([FromRoute] Guid id)
         {
-            var entityData = _context.Patient.IncludeRelated().FirstOrDefault(entity => entity.PatientId == id);
+            var entityData = _context.Patient.IncludeRelated().FirstOrDefault(entity => entity.Id == id);
             return Ok(entityData);
         }
 
@@ -131,7 +131,7 @@ namespace HospitalManagement.Controllers
         [Route("{id:Guid}")]
         public IActionResult DeleteById([FromRoute] Guid id)
         {
-            var entityData = _context.Patient.IncludeRelated().FirstOrDefault(entity => entity.PatientId == id);
+            var entityData = _context.Patient.IncludeRelated().FirstOrDefault(entity => entity.Id == id);
             if (entityData == null)
             {
                 return NotFound();
@@ -156,9 +156,9 @@ namespace HospitalManagement.Controllers
         [Produces("application/json")]
         public IActionResult UpdateById(Guid id, [FromBody] Patient updatedEntity)
         {
-            if (id != updatedEntity.PatientId)
+            if (id != updatedEntity.Id)
             {
-                return BadRequest("Mismatched PatientId");
+                return BadRequest("Mismatched Id");
             }
 
             this._context.Patient.Update(updatedEntity);

@@ -19,7 +19,7 @@ namespace HospitalManagement.Entities
         /// Primary key for the Patient 
         /// </summary>
         [Key]
-        public Guid? PatientId { get; set; }
+        public Guid? Id { get; set; }
         /// <summary>
         /// Code of the Patient 
         /// </summary>
