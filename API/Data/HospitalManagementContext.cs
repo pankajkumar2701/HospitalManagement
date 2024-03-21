@@ -19,7 +19,7 @@ namespace HospitalManagement.Data
             modelBuilder.Entity<Tenant>().HasKey(a => a.Id);
             modelBuilder.Entity<User>().HasKey(a => a.Id);
             modelBuilder.Entity<Role>().HasKey(a => a.Id);
-            modelBuilder.Entity<Patient>().HasKey(a => a.Id);
+            modelBuilder.Entity<Patient>().HasKey(a => a.PatientId);
             modelBuilder.Entity<Gender>().HasKey(a => a.Id);
             modelBuilder.Entity<Title>().HasKey(a => a.Id);
             modelBuilder.Entity<Address>().HasKey(a => a.Id);
