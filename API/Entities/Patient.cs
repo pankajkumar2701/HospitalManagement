@@ -14,9 +14,11 @@ namespace HospitalManagement.Entities
         /// TenantId of the Patient 
         /// </summary>
         public Guid? TenantId { get; set; }
+
         /// <summary>
-        /// PatientId of the Patient 
+        /// Primary key for the Patient 
         /// </summary>
+        [Key]
         public Guid? PatientId { get; set; }
         /// <summary>
         /// Code of the Patient 
