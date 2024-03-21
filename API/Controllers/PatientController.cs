@@ -183,7 +183,7 @@ namespace HospitalManagement.Controllers
         {
             if (updatedEntity == null)
                 return BadRequest("Patch document is missing.");
-            var existingEntity = this._context.Patient.FirstOrDefault(t => t.Id == id);
+            var existingEntity = this._context.Patient.FirstOrDefault(t => t.PatientId == id);
             if (existingEntity == null)
                 return NotFound();
             updatedEntity.ApplyTo(existingEntity, ModelState);

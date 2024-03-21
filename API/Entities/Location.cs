@@ -76,6 +76,6 @@ namespace HospitalManagement.Entities
         /// <summary>
         /// Collection navigation property representing associated 
         /// </summary>
-        public ICollection<Patient>? Patient { get; set; }
+        public ICollection<Patient>? PatientInfo { get; set; }
     }
 }

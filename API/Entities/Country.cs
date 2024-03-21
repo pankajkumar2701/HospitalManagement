@@ -60,10 +60,10 @@ namespace HospitalManagement.Entities
         /// <summary>
         /// Collection navigation property representing associated 
         /// </summary>
-        public ICollection<Address>? Address { get; set; }
+        public ICollection<Address>? AddressInfo { get; set; }
         /// <summary>
         /// Collection navigation property representing associated 
         /// </summary>
-        public ICollection<Location>? Location { get; set; }
+        public ICollection<Location>? LocationInfo { get; set; }
     }
 }

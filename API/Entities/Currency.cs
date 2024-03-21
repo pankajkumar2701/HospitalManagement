@@ -36,6 +36,6 @@ namespace HospitalManagement.Entities
         /// <summary>
         /// Collection navigation property representing associated 
         /// </summary>
-        public ICollection<Country>? Country { get; set; }
+        public ICollection<Country>? CountryInfo { get; set; }
     }
 }
