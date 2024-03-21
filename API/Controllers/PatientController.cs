@@ -40,7 +40,7 @@ namespace HospitalManagement.Controllers
         {
             _context.Patient.Add(model);
             this._context.SaveChanges();
-            return Ok(new { model.Id });
+            return Ok(new { model.PatientId });
         }
 
         /// <summary>Retrieves a list of patients based on specified filters</summary>
